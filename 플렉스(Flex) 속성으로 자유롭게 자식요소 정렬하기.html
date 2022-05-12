@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스(Flex) 속성으로 자유롭게 자식요소 정렬하기</title>
+    <style>
+        .parent {
+            border: 5px solid #000;
+            width: 1280px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            /* 기본값은 flex-start이고, flex-end 같은 속성도 있다. */
+            align-items: center;
+            /* overflow: hidden; */
+        }
+        .parent div {
+            border: 5px solid red;
+            height: 200px;
+            width: 300px;
+            /* float: left;
+            width: 33.3333333%; calc(1280px / 3)
+            box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div>child</div>
+    </div>
+
+</body>
+</html>

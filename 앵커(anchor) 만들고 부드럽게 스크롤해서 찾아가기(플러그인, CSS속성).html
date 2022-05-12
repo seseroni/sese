@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>앵커(anchor) 만들고 부드럽게 스크롤해서 찾아가기(플러그인, CSS속성)</title>
+    <!-- <script src="js/jquery-3.4.1.min.js"></script>
+    제이쿼리 오픈소스가 먼저 와야함
+    <script src="js/jquery.scrollTo.min.js"></script> -->
+    <style>
+        /* Google Web Font */
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+            /* IE에서는 사용 불가능 */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        header a {
+            background-color: teal;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        p {
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+        .btn-gototop {
+            background-color: pink;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <a href="#part1">html part</a>
+            <!-- #을 절대로 빼지 말것 -->
+            <a href="#part2">css part</a>
+            <a href="#part3">jquery pary</a>
+            <a href="#part4">portfolio part</a>
+        </header>
+        <h1 id="part1">html part</h1>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum praesentium est, sunt perspiciatis eius eveniet odio laborum tenetur dignissimos sequi id earum atque a voluptatibus, temporibus aliquam ducimus possimus, quaerat tempore. Odio ducimus, et debitis nam porro, enim commodi labore neque quibusdam nesciunt consequatur placeat ipsam. Quod tenetur animi corrupti eligendi possimus dolore aut provident reprehenderit, neque soluta cum vitae quaerat, impedit eius obcaecati laborum? Dolor fugiat voluptates velit ducimus illum magni praesentium laudantium veniam quasi odio libero nihil doloremque autem repellat quas nam, vero distinctio et. Quisquam consectetur possimus commodi est quod. Cumque distinctio voluptates laborum temporibus veritatis dolore debitis iure ipsa explicabo harum iste consectetur fugiat repellat asperiores expedita magni mollitia molestias, incidunt odit exercitationem amet obcaecati. Reiciendis harum exercitationem, aut, ex possimus ullam inventore reprehenderit nisi aliquam impedit molestias laborum asperiores necessitatibus in ut aspernatur. Quasi dolores unde distinctio iste similique quidem reprehenderit recusandae nihil ut sit natus, eius doloribus accusantium nemo at necessitatibus. Aspernatur ex fuga ut consequatur laudantium fugit. Sequi dolore molestiae, eum voluptatem voluptatibus nam excepturi. Placeat nihil quam eveniet enim et corrupti, iusto fugit hic ipsam eum sit, dolor assumenda repudiandae expedita cum delectus voluptatibus atque ducimus aspernatur molestias ea! Sint, accusamus!
+        </p>
+        <a class="btn-gototop" href="#">Go to top</a>
+        <!-- 상단으로 올라가는 것은 #만 넣어주면 된다. -->
+
+        <h1 id="part2">css part</h1>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum praesentium est, sunt perspiciatis eius eveniet odio laborum tenetur dignissimos sequi id earum atque a voluptatibus, temporibus aliquam ducimus possimus, quaerat tempore. Odio ducimus, et debitis nam porro, enim commodi labore neque quibusdam nesciunt consequatur placeat ipsam. Quod tenetur animi corrupti eligendi possimus dolore aut provident reprehenderit, neque soluta cum vitae quaerat, impedit eius obcaecati laborum? Dolor fugiat voluptates velit ducimus illum magni praesentium laudantium veniam quasi odio libero nihil doloremque autem repellat quas nam, vero distinctio et. Quisquam consectetur possimus commodi est quod. Cumque distinctio voluptates laborum temporibus veritatis dolore debitis iure ipsa explicabo harum iste consectetur fugiat repellat asperiores expedita magni mollitia molestias, incidunt odit exercitationem amet obcaecati. Reiciendis harum exercitationem, aut, ex possimus ullam inventore reprehenderit nisi aliquam impedit molestias laborum asperiores necessitatibus in ut aspernatur. Quasi dolores unde distinctio iste similique quidem reprehenderit recusandae nihil ut sit natus, eius doloribus accusantium nemo at necessitatibus. Aspernatur ex fuga ut consequatur laudantium fugit. Sequi dolore molestiae, eum voluptatem voluptatibus nam excepturi. Placeat nihil quam eveniet enim et corrupti, iusto fugit hic ipsam eum sit, dolor assumenda repudiandae expedita cum delectus voluptatibus atque ducimus aspernatur molestias ea! Sint, accusamus!
+        </p>
+        <a class="btn-gototop" href="#">Go to top</a>
+
+        <h1 id="part3">jquery part</h1>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum praesentium est, sunt perspiciatis eius eveniet odio laborum tenetur dignissimos sequi id earum atque a voluptatibus, temporibus aliquam ducimus possimus, quaerat tempore. Odio ducimus, et debitis nam porro, enim commodi labore neque quibusdam nesciunt consequatur placeat ipsam. Quod tenetur animi corrupti eligendi possimus dolore aut provident reprehenderit, neque soluta cum vitae quaerat, impedit eius obcaecati laborum? Dolor fugiat voluptates velit ducimus illum magni praesentium laudantium veniam quasi odio libero nihil doloremque autem repellat quas nam, vero distinctio et. Quisquam consectetur possimus commodi est quod. Cumque distinctio voluptates laborum temporibus veritatis dolore debitis iure ipsa explicabo harum iste consectetur fugiat repellat asperiores expedita magni mollitia molestias, incidunt odit exercitationem amet obcaecati. Reiciendis harum exercitationem, aut, ex possimus ullam inventore reprehenderit nisi aliquam impedit molestias laborum asperiores necessitatibus in ut aspernatur. Quasi dolores unde distinctio iste similique quidem reprehenderit recusandae nihil ut sit natus, eius doloribus accusantium nemo at necessitatibus. Aspernatur ex fuga ut consequatur laudantium fugit. Sequi dolore molestiae, eum voluptatem voluptatibus nam excepturi. Placeat nihil quam eveniet enim et corrupti, iusto fugit hic ipsam eum sit, dolor assumenda repudiandae expedita cum delectus voluptatibus atque ducimus aspernatur molestias ea! Sint, accusamus!
+        </p>
+        <a class="btn-gototop" href="#">Go to top</a>
+
+        <h1 id="part4">portfolio part</h1>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum praesentium est, sunt perspiciatis eius eveniet odio laborum tenetur dignissimos sequi id earum atque a voluptatibus, temporibus aliquam ducimus possimus, quaerat tempore. Odio ducimus, et debitis nam porro, enim commodi labore neque quibusdam nesciunt consequatur placeat ipsam. Quod tenetur animi corrupti eligendi possimus dolore aut provident reprehenderit, neque soluta cum vitae quaerat, impedit eius obcaecati laborum? Dolor fugiat voluptates velit ducimus illum magni praesentium laudantium veniam quasi odio libero nihil doloremque autem repellat quas nam, vero distinctio et. Quisquam consectetur possimus commodi est quod. Cumque distinctio voluptates laborum temporibus veritatis dolore debitis iure ipsa explicabo harum iste consectetur fugiat repellat asperiores expedita magni mollitia molestias, incidunt odit exercitationem amet obcaecati. Reiciendis harum exercitationem, aut, ex possimus ullam inventore reprehenderit nisi aliquam impedit molestias laborum asperiores necessitatibus in ut aspernatur. Quasi dolores unde distinctio iste similique quidem reprehenderit recusandae nihil ut sit natus, eius doloribus accusantium nemo at necessitatibus. Aspernatur ex fuga ut consequatur laudantium fugit. Sequi dolore molestiae, eum voluptatem voluptatibus nam excepturi. Placeat nihil quam eveniet enim et corrupti, iusto fugit hic ipsam eum sit, dolor assumenda repudiandae expedita cum delectus voluptatibus atque ducimus aspernatur molestias ea! Sint, accusamus!
+        </p>
+        <a class="btn-gototop" href="#">Go to top</a>
+
+    </div>
+
+    <!-- Smooth Scroll -->
+    <!-- <script>
+        $('header a, .btn-gototop').click(function(){
+            $.scrollTo(this.hash || 0, 900);
+            e.preventDefault();
+        })
+    </script> -->
+    <!-- Smooth Scroll -->
+</body>
+</html>
