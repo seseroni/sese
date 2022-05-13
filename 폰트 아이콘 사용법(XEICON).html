@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 아이콘 사용법(XEICON)</title>
+    <!-- <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"> -->
+    <style>
+        @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+        .close {
+            color: red;
+            background-color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            box-shadow: 0 0 20px red;
+        }
+        .box {
+            border: 1px solid #000;
+            width: 50px;
+            height: 50px;
+        }
+        .box::before {
+            content: '\e9af';
+            font-family: xeicon;
+        }
+    </style>
+</head>
+<body>
+    
+    <i class="xi-close-thin close"></i>
+    <!-- i태그는 기울림체 -->
+    <!-- XEICON은 한국형 브랜드 아이콘이 있다. -->
+    <div class="box"></div>
+    <i class="xi-home-o"></i>
+
+</body>
+</html>
