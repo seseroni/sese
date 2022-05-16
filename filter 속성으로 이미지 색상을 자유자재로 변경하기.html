@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter 속성으로 이미지 색상을 자유자재로 변경하기</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+        .image1 {
+            filter: invert(62%) sepia(92%) saturate(7425%) hue-rotate(277deg) brightness(94%) contrast(94%);
+        }
+        .image2 {
+            filter: invert(96%) sepia(37%) saturate(1247%) hue-rotate(16deg) brightness(94%) contrast(81%);
+        }
+        .image3 {
+            width: 200px;
+            /* 그라디언트로 돼 있는 그림은 속성 적용이 안됨 */
+        }
+        .image4 {
+            width: 100px;
+            filter: invert(95%) sepia(29%) saturate(3395%) hue-rotate(278deg) brightness(100%) contrast(98%);
+            /* svg파일도 단색 그림은 적용 됨 */
+        }
+    </style>
+</head>
+<body>
+    
+    <img class="image1" src="images/icon-user.png">
+    <hr>
+    <img class="image2" src="images/icon-youtube.png">
+    <hr>
+    <img class="image3" src="images/icon-mask.svg">
+    <hr>
+    <img class="image4" src="images/icon-download.svg">
+    
+</body>
+</html>

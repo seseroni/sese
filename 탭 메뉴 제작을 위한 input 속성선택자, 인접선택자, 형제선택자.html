@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴 제작을 위한 input 속성선택자, 인접선택자, 형제선택자</title>
+    <style>
+        /* Google Web Font */
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        input[id=trigger] {
+            display: none;
+        }
+        label[for=trigger] {
+            /* border: 1px solid red; */
+            width: 30px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        label[for=trigger] span {
+            display: block;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+        label[for=trigger] span:nth-child(1) {
+            top: 0;
+        }
+        label[for=trigger] span:nth-child(2) {
+            top: 50%;
+        }
+        label[for=trigger] span:nth-child(3) {
+            top: 100%;
+        }
+        input[id=trigger]:checked + label span:nth-child(1) {
+            top: 50%;
+            transform: rotate(45deg)
+        }
+        input[id=trigger]:checked + label span:nth-child(2) {
+            opacity: 0;
+        }
+        input[id=trigger]:checked + label span:nth-child(3) {
+            top: 50%;
+            transform: rotate(-45deg)
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: pink;
+            position: fixed;
+            top: 0;
+            left:-250px;
+            transition: 0.3s;
+        }
+        input[id=trigger]:checked ~ .sidebar {
+            left: 0;
+        }
+        input[id=trigger]:checked + label/*[for=trigger] */ {
+            left: 210px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <input type="checkbox" id="trigger">
+        <label for="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar"></div>
+    </div>
+
+</body>
+</html>
